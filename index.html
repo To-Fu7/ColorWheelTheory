@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theory Wheel</title>
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    .wrapper{
+        background-color: black;
+        width: 100vw ;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+    .color-wheel{
+        position: relative;
+        right: 165px;
+    }
+    .color-wheel > label > div{
+        top: 300px;
+        position: absolute;
+        width: 35px;
+        height: 35px;  
+        border-radius: 100%;
+        transform-origin: 165px;
+    }
+    .color-wheel > label > div:hover{
+        opacity: 0.7;
+    }
+    #checkHidden{
+        display: none;
+    }
+    .color1 {background-color: #ff0000; transform: rotate(0deg);}
+    .color2 {background-color: #fc670e; transform: rotate(15deg);}
+    .color3 {background-color: #ff9102; transform: rotate(30deg);}
+    .color4 {background-color: #fcc209; transform: rotate(45deg);}
+    .color5 {background-color: #fff304; transform: rotate(60deg);}
+    .color6 {background-color: #ccdb08; transform: rotate(75deg);}
+    .color7 {background-color: #8bcb33; transform: rotate(90deg);}
+    .color8 {background-color: #2bbd41; transform: rotate(105deg);}
+    .color9 {background-color: #03a94e; transform: rotate(120deg);}
+    .color10{background-color: #04a779; transform: rotate(135deg);}
+    .color11{background-color: #02a99c; transform: rotate(150deg);}
+    .color12{background-color: #0aa7be; transform: rotate(165deg);}
+    .color13{background-color: #2fc5fd; transform: rotate(180deg);}
+    .color14{background-color: #028dd8; transform: rotate(195deg);}
+    .color15{background-color: #0271c5; transform: rotate(210deg);}
+    .color16{background-color: #026cc6; transform: rotate(225deg);}
+    .color17{background-color: #0253ae; transform: rotate(240deg);}
+    .color18{background-color: #2e2e97; transform: rotate(255deg);}
+    .color19{background-color: #662891; transform: rotate(270deg);}
+    .color20{background-color: #922194; transform: rotate(285deg);}
+    .color21{background-color: #b60d91; transform: rotate(300deg);}
+    .color22{background-color: #c20d9d; transform: rotate(315deg);}
+    .color23{background-color: #f0008d; transform: rotate(330deg);}
+    .color24{background-color: #f6045d; transform: rotate(345deg);}
+    #svgArrow{
+        position: absolute;
+        top: 310px;
+    }
+    .parag{
+        position: absolute;
+        color: red
+    }
+</style>
+<body>
+    <!-- <div id="content">
+        
+    </div> -->
+    <!-- <input type="checkbox" name="" id="reset"> -->
+     <div class="parag">hello</div>
+    <div class="checkhidden" id="checkHidden">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c1">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c2">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c3">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c4">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c5">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c6">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c7">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c8">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c9">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c10">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c11">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c12">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c13">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c14">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c15">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c16">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c17">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c18">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c19">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c20">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c21">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c22">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c23">
+        <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c24">
+    </div>
+    <div class="wrapper">
+
+        <svg width="300" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" id="svgArrow">
+            <!-- Left arrow head -->
+            <polygon points="-75,10 -50,0 -50,20" fill="white"/>
+            
+            <!-- Center line -->
+            <rect x="-60" y="8" width="220" height="4" fill="white"/>
+            
+            <!-- Right arrow head -->
+            <polygon points="175,10 150,0 150,20" fill="white"/>
+          </svg>
+
+        <div class="color-wheel">
+            <label for="c1"><div class="color1"></div></label>
+            <label for="c2"><div class="color2"></div></label>
+            <label for="c3"><div class="color3"></div></label>
+            <label for="c4"><div class="color4"></div></label>
+            <label for="c5"><div class="color5"></div></label>
+            <label for="c6"><div class="color6"></div></label>
+            <label for="c7"><div class="color7"></div></label>
+            <label for="c8"><div class="color8"></div></label>
+            <label for="c9"><div class="color9"></div></label>
+            <label for="c10"><div class="color10"></div></label>
+            <label for="c11"><div class="color11"></div></label>
+            <label for="c12"><div class="color12"></div></label>
+            <label for="c13"><div class="color13"></div></label>
+            <label for="c14"><div class="color14"></div></label>
+            <label for="c15"><div class="color15"></div></label>
+            <label for="c16"><div class="color16"></div></label>
+            <label for="c17"><div class="color17"></div></label>
+            <label for="c18"><div class="color18"></div></label>
+            <label for="c19"><div class="color19"></div></label>
+            <label for="c20"><div class="color20"></div></label>
+            <label for="c21"><div class="color21"></div></label>
+            <label for="c22"><div class="color22"></div></label>
+            <label for="c23"><div class="color23"></div></label>
+            <label for="c24"><div class="color24"></div></label>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const colorHex = {
+        "c1":"#ff0000"
+    }
+
+    function toggle(isChecked) {
+        const check = document.querySelectorAll('.uncheck')
+        const c1 = document.getElementById("c1")
+        const c2 = document.getElementById("c2")
+        const c3 = document.getElementById("c3")
+        const c4 = document.getElementById("c4")
+        const c5 = document.getElementById("c5")
+        const c6 = document.getElementById("c6")
+        const c7 = document.getElementById("c7")
+        const c8 = document.getElementById("c8")
+        const c9 = document.getElementById("c9")
+        const c10 = document.getElementById("c10")
+        const c11 = document.getElementById("c11")
+        const c12 = document.getElementById("c12")
+        const c13 = document.getElementById("c13")
+        const c14 = document.getElementById("c14")
+        const c15 = document.getElementById("c15")
+        const c16 = document.getElementById("c16")
+        const c17 = document.getElementById("c17")
+        const c18 = document.getElementById("c18")
+        const c19 = document.getElementById("c19")
+        const c20 = document.getElementById("c20")
+        const c21 = document.getElementById("c21")
+        const c22 = document.getElementById("c22")
+        const c23 = document.getElementById("c23")
+        const c24 = document.getElementById("c24")
+
+        check.forEach(checkbox => {
+            if(checkbox !== isChecked){
+                checkbox.checked = false
+            }if(c1 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(0deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c2 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(15deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c3 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(30deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c4 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(45deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c5 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(60deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c6 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(75deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c7 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(90deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c8 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(105deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c9 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(120deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c10 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(135deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c11 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(150deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c12 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(165deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c13 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(180deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c14 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(195deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c15 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(210deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c16 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(225deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c17 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(240deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c18 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(255deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c19 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(270deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c20 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(285deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c21 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(300deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c22 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(315deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c23 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(330deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }if(c24 == isChecked){
+                document.getElementById('svgArrow').style.transition = 'transform 0.3s'
+                document.getElementById('svgArrow').style.transform = 'rotate(345deg)'
+                document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+            }
+        })
+    }
+
+
+
+</script>
