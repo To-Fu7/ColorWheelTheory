@@ -60,11 +60,25 @@
     .color24{background-color: #f6045d; transform: rotate(345deg);}
     #svgArrow{
         position: absolute;
-        top: 310px;
+        top: 270px;
     }
-    .parag{
+    .hexInfo{
+        display: flex;
         position: absolute;
-        color: red
+        top: 310px;
+        margin-left: 540px;
+    }
+    .hexInfo > div{
+        margin-left: 20px;
+    }
+    .hex{
+        width: 60px;
+        height: 50px;
+        padding: 8px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #313131;
+        border-radius: 5px;
     }
 </style>
 <body>
@@ -72,7 +86,6 @@
         
     </div> -->
     <!-- <input type="checkbox" name="" id="reset"> -->
-     <div class="parag">hello</div>
     <div class="checkhidden" id="checkHidden">
         <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c1">
         <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c2">
@@ -100,18 +113,35 @@
         <input type="checkbox" onclick="toggle(this)" class="uncheck" id="c24">
     </div>
     <div class="wrapper">
-
-        <svg width="300" height="20" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg" id="svgArrow">
-            <!-- Left arrow head -->
-            <polygon points="-75,10 -50,0 -50,20" fill="white"/>
-            
-            <!-- Center line -->
-            <rect x="-60" y="8" width="220" height="4" fill="white"/>
-            
-            <!-- Right arrow head -->
-            <polygon points="175,10 150,0 150,20" fill="white"/>
+        <div class="hexInfo">
+            <div id="hex1" class="hex">
+            </div>
+            <div id="hex2" class="hex">
+            </div>
+        </div>
+          <!-- 3 ARROW -->
+          <svg width="400" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="svgArrow">
+            <circle cx="50" cy="50" r="8" fill="black" stroke="white" stroke-width="2"/>
+            <line x1="43" y1="50" x2="-52" y2="50" stroke="white" stroke-width="3"/>
+            <polygon points="-70,50 -50,42 -50,58" fill="white"/>
+            <line x1="59" y1="50" x2="160" y2="20" stroke="white" stroke-width="3"/>
+            <polygon points="170,16 155,30 150,13" fill="white"/>
+            <line x1="59" y1="50" x2="160" y2="80" stroke="white" stroke-width="3"/>
+            <polygon points="170,83 155,70 150,85" fill="white"/>
           </svg>
 
+          <!-- 2 ARROW -->
+          <!-- <svg width="400" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" id="svgArrow">
+            <circle cx="50" cy="50" r="8" fill="black" stroke="white" stroke-width="2"/>
+            <line x1="43" y1="50" x2="-52" y2="50" stroke="white" stroke-width="3"/>
+            <polygon points="-70,50 -50,42 -50,58" fill="white"/>
+            <line x1="58" y1="50" x2="155" y2="50" stroke="white" stroke-width="3"/>
+            <polygon points="170,50 150,42 150,58" fill="white"/>
+          </svg> -->
+          
+          
+          
+          
         <div class="color-wheel">
             <label for="c1"><div class="color1"></div></label>
             <label for="c2"><div class="color2"></div></label>
@@ -145,6 +175,8 @@
     const colorHex = {
         "c1":"#ff0000"
     }
+    let hex1 = document.getElementById("hex1")
+    let hex2 = document.getElementById("hex2")
 
     function toggle(isChecked) {
         const check = document.querySelectorAll('.uncheck')
@@ -180,98 +212,244 @@
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(0deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#FF0000'
+                hex1.style.boxShadow = '0px 0px 25px #ff0000'
+                hex1.textContent = "#FF0000"
+                hex2.style.backgroundColor = '#2fc5fd'
+                hex2.style.boxShadow = '0px 0px 25px #2fc5fd'
+                hex2.textContent = "#2fc5fd"
             }if(c2 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(15deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#fc670e'
+                hex1.style.boxShadow = '0px 0px 25px #fc670e'
+                hex1.textContent = "#fc670e"
+                hex2.style.backgroundColor = '#028dd8'
+                hex2.style.boxShadow = '0px 0px 25px #028dd8'
+                hex2.textContent = "#028dd8"
             }if(c3 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(30deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#ff9102'
+                hex1.style.boxShadow = '0px 0px 25px #ff9102'
+                hex1.textContent = "#ff9102"
+                hex2.style.backgroundColor = '#0271c5'
+                hex2.style.boxShadow = '0px 0px 25px #0271c5'
+                hex2.textContent = "#0271c5"
             }if(c4 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(45deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#fcc209'
+                hex1.style.boxShadow = '0px 0px 25px #fcc209'
+                hex1.textContent = "#fcc209"
+                hex2.style.backgroundColor = '#026cc6'
+                hex2.style.boxShadow = '0px 0px 25px #026cc6'
+                hex2.textContent = "#026cc6"
             }if(c5 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(60deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#fff304'
+                hex1.style.boxShadow = '0px 0px 25px #fff304'
+                hex1.textContent = "#fff304"
+                hex2.style.backgroundColor = '#0253ae'
+                hex2.style.boxShadow = '0px 0px 25px #0253ae'
+                hex2.textContent = "#0253ae"
             }if(c6 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(75deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#ccdb08'
+                hex1.style.boxShadow = '0px 0px 25px #ccdb08'
+                hex1.textContent = "#ccdb08"
+                hex2.style.backgroundColor = '#2e2e97'
+                hex2.style.boxShadow = '0px 0px 25px #2e2e97'
+                hex2.textContent = "#2e2e97"
             }if(c7 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(90deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#8bcb33'
+                hex1.style.boxShadow = '0px 0px 25px #8bcb33'
+                hex1.textContent = "#8bcb33"
+                hex2.style.backgroundColor = '#662891'
+                hex2.style.boxShadow = '0px 0px 25px #662891'
+                hex2.textContent = "#662891"
             }if(c8 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(105deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#2bbd41'
+                hex1.style.boxShadow = '0px 0px 25px #2bbd41'
+                hex1.textContent = "#2bbd41"
+                hex2.style.backgroundColor = '#922194'
+                hex2.style.boxShadow = '0px 0px 25px #922194'
+                hex2.textContent = "#922194"
             }if(c9 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(120deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#03a94e'
+                hex1.style.boxShadow = '0px 0px 25px #03a94e'
+                hex1.textContent = "#03a94e"
+                hex2.style.backgroundColor = '#b60d91'
+                hex2.style.boxShadow = '0px 0px 25px #b60d91'
+                hex2.textContent = "#b60d91"
             }if(c10 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(135deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#04a779'
+                hex1.style.boxShadow = '0px 0px 25px #04a779'
+                hex1.textContent = "#04a779"
+                hex2.style.backgroundColor = '#c20d9d'
+                hex2.style.boxShadow = '0px 0px 25px #c20d9d'
+                hex2.textContent = "#c20d9d"
             }if(c11 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(150deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex1.style.backgroundColor = '#02a99c'
+                hex1.style.boxShadow = '0px 0px 25px #02a99c'
+                hex1.textContent = "#02a99c"
+                hex2.style.backgroundColor = '#f0008d'
+                hex2.style.boxShadow = '0px 0px 25px #f0008d'
+                hex2.textContent = "#f0008d"
             }if(c12 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(165deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
-            }if(c13 == isChecked){
+                hex1.style.backgroundColor = '#0aa7be'
+                hex1.style.boxShadow = '0px 0px 25px #0aa7be'
+                hex1.textContent = "#0aa7be"
+                hex2.style.backgroundColor = '#f6045d'
+                hex2.style.boxShadow = '0px 0px 25px #f6045d'
+                hex2.textContent = "#f6045d"
+            }
+            
+            if(c13 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(180deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#FF0000'
+                hex2.style.boxShadow = '0px 0px 25px #ff0000'
+                hex2.textContent = "#FF0000"
+                hex1.style.backgroundColor = '#2fc5fd'
+                hex1.style.boxShadow = '0px 0px 25px #2fc5fd'
+                hex1.textContent = "#2fc5fd"
             }if(c14 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(195deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#fc670e'
+                hex2.style.boxShadow = '0px 0px 25px #fc670e'
+                hex2.textContent = "#fc670e"
+                hex1.style.backgroundColor = '#028dd8'
+                hex1.style.boxShadow = '0px 0px 25px #028dd8'
+                hex1.textContent = "#028dd8"
             }if(c15 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(210deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#ff9102'
+                hex2.style.boxShadow = '0px 0px 25px #ff9102'
+                hex2.textContent = "#ff9102"
+                hex1.style.backgroundColor = '#0271c5'
+                hex1.style.boxShadow = '0px 0px 25px #0271c5'
+                hex1.textContent = "#0271c5"
             }if(c16 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(225deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#fcc209'
+                hex2.style.boxShadow = '0px 0px 25px #fcc209'
+                hex2.textContent = "#fcc209"
+                hex1.style.backgroundColor = '#026cc6'
+                hex1.style.boxShadow = '0px 0px 25px ##026cc6'
+                hex1.textContent = "#026cc6"
             }if(c17 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(240deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#fff304'
+                hex2.style.boxShadow = '0px 0px 25px #fff304'
+                hex2.textContent = "#fff304"
+                hex1.style.backgroundColor = '#0253ae'
+                hex1.style.boxShadow = '0px 0px 25px #0253ae'
+                hex1.textContent = "#0253ae"
             }if(c18 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(255deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#ccdb08'
+                hex2.style.boxShadow = '0px 0px 25px #ccdb08'
+                hex2.textContent = "#ccdb08"
+                hex1.style.backgroundColor = '#2e2e97'
+                hex1.style.boxShadow = '0px 0px 25px #2e2e97'
+                hex1.textContent = "#2e2e97"
             }if(c19 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(270deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#8bcb33'
+                hex2.style.boxShadow = '0px 0px 25px #8bcb33'
+                hex2.textContent = "#8bcb33"
+                hex1.style.backgroundColor = '#662891'
+                hex1.style.boxShadow = '0px 0px 25px #662891'
+                hex1.textContent = "#662891"
             }if(c20 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(285deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#2bbd41'
+                hex2.style.boxShadow = '0px 0px 25px #2bbd41'
+                hex2.textContent = "#2bbd41"
+                hex1.style.backgroundColor = '#922194'
+                hex1.style.boxShadow = '0px 0px 25px #922194'
+                hex1.textContent = "#922194"
             }if(c21 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(300deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#03a94e'
+                hex2.style.boxShadow = '0px 0px 25px #03a94e'
+                hex2.textContent = "#03a94e"
+                hex1.style.backgroundColor = '#b60d91'
+                hex1.style.boxShadow = '0px 0px 25px #b60d91'
+                hex1.textContent = "#b60d91"
             }if(c22 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(315deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#04a779'
+                hex2.style.boxShadow = '0px 0px 25px #04a779'
+                hex2.textContent = "#04a779"
+                hex1.style.backgroundColor = '#c20d9d'
+                hex1.style.boxShadow = '0px 0px 25px #c20d9d'
+                hex1.textContent = "#c20d9d"
             }if(c23 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(330deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#02a99c'
+                hex2.style.boxShadow = '0px 0px 25px #02a99c'
+                hex2.textContent = "#02a99c"
+                hex1.style.backgroundColor = '#f0008d'
+                hex1.style.boxShadow = '0px 0px 25px #f0008d'
+                hex1.textContent = "#f0008d"
             }if(c24 == isChecked){
                 document.getElementById('svgArrow').style.transition = 'transform 0.3s'
                 document.getElementById('svgArrow').style.transform = 'rotate(345deg)'
                 document.getElementById('svgArrow').style.transitionTimingFunction = "ease-in-out"
+                hex2.style.backgroundColor = '#0aa7be'
+                hex2.style.boxShadow = '0px 0px 25px #0aa7be'
+                hex2.textContent = "#0aa7be"
+                hex1.style.backgroundColor = '#f6045d'
+                hex1.style.boxShadow = '0px 0px 25px #f6045d'
+                hex1.textContent = "#f6045d"
             }
         })
     }
