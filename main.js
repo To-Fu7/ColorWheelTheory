@@ -13,12 +13,43 @@ let hex2 = document.getElementById("hex2")
 function hide3Arrow() {
     document.getElementById("svg3Arrow").style.visibility = "hidden"
     document.getElementById("svg2Arrow").style.visibility = "visible"
-    document.getElementById("hexInfo").style.visibility = "visible"
+    document.getElementById("hex1").style.visibility = "visible"
+    document.getElementById("hex2").style.visibility = "visible"
+    document.getElementById("hex3").style.visibility = "hidden"
+    document.getElementById('svg3Arrow').style.transition = 'transform 0.3s'
+    document.getElementById('svg2Arrow').style.transition = 'transform 0.3s'
+    document.getElementById('svg3Arrow').style.transform = 'rotate(0deg)'
+    document.getElementById('svg2Arrow').style.transform = 'rotate(0deg)'
+    document.getElementById('svg3Arrow').style.transitionTimingFunction = "ease-in-out"
+    document.getElementById('svg2Arrow').style.transitionTimingFunction = "ease-in-out"
+    hex1.style.backgroundColor = '#FF0000'
+    hex1.style.boxShadow = '0px 0px 25px #ff0000'
+    hex1.textContent = "#FF0000"
+    hex2.style.backgroundColor = '#2fc5fd'
+    hex2.style.boxShadow = '0px 0px 25px #2fc5fd'
+    hex2.textContent = "#2fc5fd"
 }
 function hide2Arrow() {
     document.getElementById("svg3Arrow").style.visibility = "visible"
     document.getElementById("svg2Arrow").style.visibility = "hidden"
-    document.getElementById("hexInfo").style.visibility = "visible"
+    document.getElementById("hex1").style.visibility = "visible"
+    document.getElementById("hex2").style.visibility = "visible"
+    document.getElementById("hex3").style.visibility = "visible"
+    document.getElementById('svg3Arrow').style.transition = 'transform 0.3s'
+    document.getElementById('svg2Arrow').style.transition = 'transform 0.3s'
+    document.getElementById('svg3Arrow').style.transform = 'rotate(0deg)'
+    document.getElementById('svg2Arrow').style.transform = 'rotate(0deg)'
+    document.getElementById('svg3Arrow').style.transitionTimingFunction = "ease-in-out"
+    document.getElementById('svg2Arrow').style.transitionTimingFunction = "ease-in-out"
+    hex1.style.backgroundColor = '#FF0000'
+    hex1.style.boxShadow = '0px 0px 25px #ff0000'
+    hex1.textContent = "#FF0000"
+    hex2.style.backgroundColor = '#0aa7be'
+    hex2.style.boxShadow = '0px 0px 25px #0aa7be'
+    hex2.textContent = "#0aa7be"
+    hex3.style.backgroundColor = '#028dd8'
+    hex3.style.boxShadow = '0px 0px 25px #028dd8'
+    hex3.textContent = "#028dd8"
 }
 
 function toggle(isChecked) {
@@ -62,9 +93,12 @@ function toggle(isChecked) {
             hex1.style.backgroundColor = '#FF0000'
             hex1.style.boxShadow = '0px 0px 25px #ff0000'
             hex1.textContent = "#FF0000"
-            hex2.style.backgroundColor = '#2fc5fd'
-            hex2.style.boxShadow = '0px 0px 25px #2fc5fd'
-            hex2.textContent = "#2fc5fd"
+            hex2.style.backgroundColor = '#0aa7be'
+            hex2.style.boxShadow = '0px 0px 25px #0aa7be'
+            hex2.textContent = "#0aa7be"
+            hex3.style.backgroundColor = '#028dd8'
+            hex3.style.boxShadow = '0px 0px 25px #028dd8'
+            hex3.textContent = "#028dd8"
         }if(c2 == isChecked){
             document.getElementById('svg3Arrow').style.transition = 'transform 0.3s'
             document.getElementById('svg2Arrow').style.transition = 'transform 0.3s'
@@ -75,9 +109,12 @@ function toggle(isChecked) {
             hex1.style.backgroundColor = '#fc670e'
             hex1.style.boxShadow = '0px 0px 25px #fc670e'
             hex1.textContent = "#fc670e"
-            hex2.style.backgroundColor = '#028dd8'
-            hex2.style.boxShadow = '0px 0px 25px #028dd8'
-            hex2.textContent = "#028dd8"
+            hex2.style.backgroundColor = '#2fc5fd'
+            hex2.style.boxShadow = '0px 0px 25px #2fc5fd'
+            hex2.textContent = "#2fc5fd"
+            hex3.style.backgroundColor = '#0271c5'
+            hex3.style.boxShadow = '0px 0px 25px #0271c5'
+            hex3.textContent = "#0271c5"
         }if(c3 == isChecked){
             document.getElementById('svg3Arrow').style.transition = 'transform 0.3s'
             document.getElementById('svg2Arrow').style.transition = 'transform 0.3s'
