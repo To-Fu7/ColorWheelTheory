@@ -52,19 +52,22 @@ body{
 .color24{background-color: #f6045d; transform: rotate(345deg);}
 #svg2Arrow{
     position: absolute;
-    top: 325px;
+    top: 270px;
     visibility: hidden;
 }
 #svg3Arrow{
     position: absolute;
-    top: 325px;
+    top: 270px;
     visibility: hidden;
 }
 .hexInfo{
     visibility: hidden;
     position: absolute;
-    top: 310px;
+    top: 285px;
     margin-left: 540px;
+    font-weight: bold;
+    color: black;
+    /* color: white; */
 }
 .hexWrap > div{
     margin-left: 30px;
@@ -83,5 +86,39 @@ body{
 }
 #hex3{
     margin-top: 30px;
-    margin-left: 080px;
+    margin-left: 80px;
+}
+.mode {
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    display: flex;
+}
+.duo{
+    background-color: #27292a;
+    cursor: pointer;
+    /* position: relative; */
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.duo:hover {
+    background-color: #151616;
+}
+.tri:hover {
+    background-color: #151616;
+}
+.tri{
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #27292a;
+    cursor: pointer;
+    /* position: relative; */
+    padding: 20px;
+}
+#trimodes, #duomodes {
+    display: none;
 }
